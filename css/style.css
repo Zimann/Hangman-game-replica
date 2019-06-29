@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'AllerDisplay';
+    src: url('../fonts/AllerDisplay.ttf');
+}
+html {
+    font-family: 'AllerDisplay';
+    background-color: #3B4263;
+    color: #53555D;
+    overflow-y: hidden;
+}
+.unselectable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/*----------Placeholder styling-----------*/
+
+::-webkit-input-placeholder {
+    color: #fff;
+    font-family: 'AllerDisplay';
+}
+::-moz-placeholder {
+    color: #fff;
+    font-family: 'AllerDisplay';
+}
+:-ms-input-placeholder {
+    color: #fff;
+    font-family: 'AllerDisplay';
+}
+input:-moz-placeholder {
+    color: #fff;
+    font-family: 'AllerDisplay';
+}
+input {
+    border: none;
+    text-shadow: 0 0 0 0;
+    text-align: center;
+    /* text-shadow: 0 0 0 #fff; */
+    color: #fff;
+}
+input:focus {
+    outline: none;
+    color: transparent;
+    text-shadow: 0px 0px 0px #fff;
+}
+
+/*-Main container and end game messages styling--*/
+
+#main_container {
+    width: 1000px;
+    height: 650px;
+    margin: 0 auto;
+    margin-top: 38px;
+    background: url('../sources/hangman_canvas_background.png');
+    background-position: center top;
+    transition: 0.5s ease-in;
+}
+.new-word {
+    z-index: 9999;
+    position: absolute;
+    width: 18%;
+    margin-left: 41%;
+    margin-right: 41%;
+    margin-top: 350px;
+    color: #ffb900;
+    padding: 2px 45px;
+    border-style: dashed;
+    border-color: #ffb900;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 400;
+    visibility: hidden;
+    transition: 0.3s ease-in;
+}
+.new-word:hover {
+    cursor: pointer;
+    background-color: #ffb900;
+    color: #fff;
+}
+.new-word:focus {
+    text-decoration: none;
+    outline-style: none;
+}
+.game-over-message,
+.winning-message,
+.word-information {
+    z-index: 9999;
+    position: absolute;
+    width: 22%;
+    margin-left: 39%;
+    margin-right: 39%;
+    margin-top: 90px;
+    font-size: 55px;
+    text-align: center;
+    visibility: hidden;
+}
+.word-information {
+    margin-left: 63%;
+    font-size: 40px;
+    margin-top: 186px;
+    color: #fff;
+}
+.generated-word {
+    color: #ffb900;
+}
+.winning-message {
+    color: #ffb900;
+}
+.game-over-message {
+    color: #d12727;
+}
+.action-information-text {
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    width: 22%;
+    margin-left: 39%;
+    margin-right: 39%;
+    text-align: center;
+    margin-top: 260px;
+}
+
+/*--------------Top right corner text styling-------------*/
+
+#top_letter_information h3,
+.missed_letter_list {
+    float: right;
+}
+#top_letter_information h3 {
+    position: absolute;
+    right: 15%;
+    top: 9%;
+}
+.missed_letter_list {
+    margin-top: 55px;
+    font-size: 40px;
+    /*transform: translateX(12%);*/
+    letter-spacing: 10px;
+    color: #4D71FA;
+}
+
+/*------ Hangman positioning ----*/
+
+.hide {
+    visibility: hidden;
+}
+#bar {
+    margin-top: 30px !important;
+}
+#head {
+    position: absolute;
+    margin-top: -40px;
+    z-index: 1000;
+    transform: translateX(157%);
+}
+#neck {
+    position: absolute;
+    transform: translateX(407%);
+    margin-top: 20px;
+}
+#body {
+    position: absolute;
+    margin-top: 80px;
+    transform: translateX(150%);
+}
+#left_arm,
+#right_arm {
+    margin-top: 80px;
+    transform: translateX(60.4%);
+    position: absolute;
+    z-index: 998;
+}
+#right_arm {
+    transform: translateX(175%);
+}
+#left_hand,
+#right_hand {
+    margin-top: 175px;
+    transform: translateX(240%);
+    position: absolute;
+}
+#right_hand {
+    transform: translateX(1070%);
+}
+#left_leg,
+#right_leg {
+    position: absolute;
+    z-index: 997;
+    margin-top: 220px;
+}
+#left_leg {
+    transform: translateX(152%);
+}
+#right_leg {
+    transform: translateX(258%);
+}
+#left_foot,
+#right_foot {
+    margin-top: 380px;
+    transform: translateX(107%);
+    z-index: 1000;
+    position: absolute;
+}
+#right_foot {
+    transform: translateX(290%);
+}
+#length_reference {
+    display: none;
+}
+
+/*-----Letter container from the bottom of the page styling---------*/
+
+.inactive,
+.active {
+    font-family: 'AllerDisplay';
+    margin-left: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    height: 70px;
+    width: 60px;
+    background-color: #e6e6e7;
+    border-radius: 10%;
+    border: none;
+    font-size: 37px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.active {
+    background-color: #53555D;
+}
+
+#letters {
+    position: absolute;
+    bottom: 25px;
+}
