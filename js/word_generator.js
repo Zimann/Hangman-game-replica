@@ -1,7 +1,7 @@
 
 //object container that has the query parameter values
 const requestObject = {
-    apiLink:'http://api.wordnik.com:80/v4/words.json/randomWords?',
+    apiLink:'https://api.wordnik.com/v4/words.json/randomWords?',
     key:'a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5',
     minCorpus:2500,
     maxCorpus:-1,
