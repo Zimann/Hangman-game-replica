@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
                 }
                 //Disable special character input (ex: . , ;' ][\]) and the tab key
-                if (e.keyCode >= 104 && e.keyCode <= 222 || e.keyCode === 9) {
+                if (e.keyCode >= 104 && e.keyCode <= 223 || e.keyCode === 9) {
                     e.preventDefault();
                 }
             })
