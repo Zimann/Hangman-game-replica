@@ -3,65 +3,83 @@
 
 <head>
     <title>Hangman</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="game-messages-section">
-        <p class="game-over-message">GAME OVER</p>
-        <p class="winning-message">GOOD JOB!<br></p>
-        <button class="new-word"><h2>NEW WORD</h2></button>
-        <p class="action-information-text">Click the button below to start a new game ☺</p>
-        <p class="word-information"></p>
-    </div>
-    <div id="main_container">
-        <section id="top_section">
-            <div id="top_letter_information">
-                <h3 id="missed_letters">YOU MISSED: </h3>
-                <div class="missed-letter-list"></div>
-            </div>
-            <img id="bar" src="imgs/bar.png" alt="bar">
-        </section>
-        <div id="hangMan" class="hide">
-            <img id="head" class="hide" src="imgs/head.png" alt="head">
-            <img id="neck" class="hide" src="imgs/neck.png" alt="neck">
-            <img id="body" class="hide" src="imgs/corpus.png" alt="corpus">
-            <!-- inline arms section below -->
-            <img class="hide" id="left_arm" src="imgs/left-arm.png" alt="left-arm">
-            <img class="hide" id="right_arm" src="imgs/right-arm.png" alt="right-arm">
-            <!-- inline hands section below -->
-            <img class="hide" id="left_hand" src="imgs/left-hand.png" alt="left-hand">
-            <img class="hide" id="right_hand" src="imgs/right-hand.png" alt="right-hand">
-            <!-- inline legs section below -->
-            <img class="hide" id="left_leg" src="imgs/left-leg.png" alt="left-leg">
-            <img class="hide" id="right_leg" src="imgs/right-leg.png" alt="right-leg">
-            <!-- inline feet section below -->
-            <img class="hide" id="left_foot" src="imgs/left-foot.png" alt="left-foot">
-            <img class="hide" id="right_foot" src="imgs/right-foot.png" alt="right-foot">
+<div class="game-messages-section">
+    <p class="game-over-message">GAME OVER</p>
+    <p class="winning-message">GOOD JOB!<br></p>
+    <button class="new-word"><h2>NEW WORD</h2></button>
+    <p class="action-information-text">Click the button below to start a new game ☺</p>
+    <p class="word-information"></p>
+</div>
+<div id="main_container">
+    <section id="top_section">
+        <div id="top_letter_information">
+            <h3 id="missed_letters">YOU MISSED: </h3>
+            <div class="missed-letter-list"></div>
         </div>
-
-        <!--in this section the generated keyword will be appended, and it will be used only for reference purposes-->
-<!--        <h1 id="length_reference"></h1>-->
-
-        <!-- inline letter section below -->
-        <section id="letters">
-            <input class="inactive" type="text" maxlength="1">
-            <input class="inactive" type="text" maxlength="1">
-            <input class="inactive" type="text" maxlength="1">
-            <input class="inactive" type="text" maxlength="1">
-            <input class="inactive" type="text" maxlength="1">
-            <input class="inactive" type="text" maxlength="1">
-            <input class="inactive" type="text" maxlength="1">
-            <input class="inactive" type="text" maxlength="1">
-            <input class="inactive" type="text" maxlength="1">
-            <input class="inactive" type="text" maxlength="1">
-            <input class="inactive" type="text" maxlength="1">
-        </section>
+        <img id="bar" src="imgs/bar.png" alt="bar">
+    </section>
+    <div id="hangMan" class="hide">
+        <img id="head" class="hide" src="imgs/head.png" alt="head">
+        <img id="neck" class="hide" src="imgs/neck.png" alt="neck">
+        <img id="body" class="hide" src="imgs/corpus.png" alt="corpus">
+        <!-- inline arms section below -->
+        <img class="hide" id="left_arm" src="imgs/left-arm.png" alt="left-arm">
+        <img class="hide" id="right_arm" src="imgs/right-arm.png" alt="right-arm">
+        <!-- inline hands section below -->
+        <img class="hide" id="left_hand" src="imgs/left-hand.png" alt="left-hand">
+        <img class="hide" id="right_hand" src="imgs/right-hand.png" alt="right-hand">
+        <!-- inline legs section below -->
+        <img class="hide" id="left_leg" src="imgs/left-leg.png" alt="left-leg">
+        <img class="hide" id="right_leg" src="imgs/right-leg.png" alt="right-leg">
+        <!-- inline feet section below -->
+        <img class="hide" id="left_foot" src="imgs/left-foot.png" alt="left-foot">
+        <img class="hide" id="right_foot" src="imgs/right-foot.png" alt="right-foot">
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/word_generator.js"></script>
-    <script src="js/scripting.js"></script>
+
+    <!--in this section the generated keyword will be appended, and it will be used only for reference purposes-->
+    <!--        <h1 id="length_reference"></h1>-->
+
+    <!-- inline letter section below -->
+    <section id="letters">
+        <input class="inactive" type="text" maxlength="1">
+        <input class="inactive" type="text" maxlength="1">
+        <input class="inactive" type="text" maxlength="1">
+        <input class="inactive" type="text" maxlength="1">
+        <input class="inactive" type="text" maxlength="1">
+        <input class="inactive" type="text" maxlength="1">
+        <input class="inactive" type="text" maxlength="1">
+        <input class="inactive" type="text" maxlength="1">
+        <input class="inactive" type="text" maxlength="1">
+        <input class="inactive" type="text" maxlength="1">
+        <input class="inactive" type="text" maxlength="1">
+    </section>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/word_generator.js"></script>
+<script src="js/scripting.js"></script>
 </body>
 
+</html>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
 </html>
